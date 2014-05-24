@@ -87,8 +87,9 @@ module Robobot
 
 		# Focus the window
 		def focus
-			`xdotool windowfocus #{@window}`
-			puts "xdotool windowfocus #{@window}" if Robobot.debug
+			# may work better than windowfocus, also switches workspaces
+			`xdotool windowactivate --sync #{@window}`
+			puts "xdotool windowactivate --sync #{@window}" if Robobot.debug
 		end
 
 		# Kill window
