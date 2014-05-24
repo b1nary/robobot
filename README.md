@@ -2,6 +2,8 @@
 
 TODO: Write a gem description
 
+**This gem works only on linux!**
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -15,6 +17,20 @@ And then execute:
 Or install it yourself as:
 
     $ gem install robobot
+
+## Depencies
+
+You need to have xdotool installed
+
+    $ sudo apt-get install xdotool
+
+If you like notifications you need libnotify as well:
+
+    $ sudo apt-get install libnotify-bin
+
+And if you want to use the beep functions you need to:
+
+    $ modprobe pcspkr
 
 ## Usage
 

@@ -23,3 +23,17 @@ window.focus
 # window.kill
 
 keyboard = Robobot::Keyboard.new window
+100.times do
+keyboard.key "space"
+end
+
+mouse = Robobot::Mouse.new window
+mouse.click
+sleep 1
+mouse.move 100, 100
+mouse.click 3
+sleep 0.5
+mouse.move 100, 10
+mouse.down
+sleep 0.5
+mouse.up

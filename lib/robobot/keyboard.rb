@@ -1,9 +1,13 @@
-module Robobot
+# This class controls the keyboard
 
+# Author::    Roman Pramberger (mailto:roman@pramberger.ch)
+# License::   MIT
+
+module Robobot
 	class Keyboard
 
 		# Initialize keyboard
-		def initialize window
+		def initialize window = nil
 			@window = window
 		end
 
@@ -31,12 +35,13 @@ module Robobot
 
 		# Command generator (add window if set)
 		def cmd command
-			cmd = "xdotool #{cmd}"
+			command = command.split(" ",2)
+			cmd = "xdotool #{command[0]}"
 			cmd += " --window #{@window.id}" if @window
+			cmd += " #{command[1]}"
 			puts "#{cmd}"
 			`#{cmd}`
 		end
 
 	end
-
 end
