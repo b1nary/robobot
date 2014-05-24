@@ -31,6 +31,11 @@ module Robobot
 			cmd "keyup #{key}"
 		end
 
+		# type text
+		def type text
+			cmd "type \"#{text}\""
+		end
+
 		private
 
 		# Command generator (add window if set)
