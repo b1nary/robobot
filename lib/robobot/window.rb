@@ -7,7 +7,9 @@
 
 module Robobot
 	class Window
+		require 'RMagick'
 		@window
+		@img
 
 		# Gets a window by process name (string) or process id (integer)
 		# you may also use :current to use the current active one
